@@ -1,0 +1,367 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-bar .nav-link {
+  font-size: 1rem;
+  color: #555;
+}
+
+.nav-bar .nav-link:hover {
+  color: #007bff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.collapsed {
+  transform: translateX(-250px);
+}
+
+.sidebar .nav-item {
+  display: block;
+  padding: 1rem;
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar .nav-item i {
+  color: #007bff;
+}
+
+.sidebar .nav-item:hover {
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 70px;
+  margin-left: 250px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 0;
+}
+
+/* Accessibility Buttons */
+.header-right .btn {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header-right {
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    transform: translateX(-250px);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  flex-grow: 1;
+}
+
+.search-container {
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  padding: 0.8em 1.2em;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-btn {
+  position: absolute;
+  right: 0.4em;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6em;
+  cursor: pointer;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+.suggestion-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.suggestion-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-dropdown ul li {
+  padding: 0.8em 1.2em;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.suggestion-dropdown ul li a:hover {
+  color: #007bff;
+}
+
+.suggestion-dropdown ul li:last-child {
+  border-bottom: none;
+}
+
+.suggestion-dropdown ul li:focus-within a {
+  background-color: #f8f9fa;
+}
+
+/* Make it hidden by default for accessibility */
+.visually-hidden {
+  display: none;
+}
+.high-contrast {
+  background-color: black;
+  color: white;
+}
+
+.high-contrast .card {
+  background-color: #222;
+  color: white;
+}
+
+.high-contrast .progress-bar {
+  background-color: yellow;
+}
+
+.high-contrast a {
+  color: cyan;
+}
+/* Status Badges */
+.badge {
+  font-size: 0.9em;
+  padding: 0.5em 1em;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+  color: white;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+/* Table Styling */
+.table {
+  font-size: 1rem;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Filters and Search */
+.form-select, .form-control {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Timeline Styles */
+.timeline {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding: 10px 0;
+  padding-left: 30px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.timeline li:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.timeline li:after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background-color: #ddd;
+}
+
+/* Highlight Badge Colors */
+.badge {
+  font-size: 0.9em;
+  padding: 0.4em 0.8em;
+  border-radius: 0.25rem;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.badge.bg-success {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Back Button */
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+
+
+
+
+/* Calendar Styling */
+#calendar {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#calendar h5 {
+  margin-bottom: 20px;
+}
+
+.table-bordered {
+  text-align: center;
+}
+
+.event-day {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.event-day:hover {
+  background-color: #0056b3;
+}
+
+/* Event Details Section */
+#eventDetails {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

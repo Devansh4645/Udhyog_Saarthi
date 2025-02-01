@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udhyog Saarthi Login</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+
+  <!-- Main Container -->
+  <div class="login-container translucent-bg p-8 rounded-lg shadow-lg max-w-lg w-full">
+    <h2 class="text-4xl font-bold text-center text-blue-700 mb-4">Udhyog Saarthi Login</h2>
+    <!-- Login Form -->
+    <form id="loginForm" action="/login" method="POST">
+      <label class="block mb-1 font-semibold text-gray-700" for="udid">Enrolment Number / UDID Number*</label>
+      <input type="text" id="udid" class="input-field" placeholder="Enter your UDID" required>
+
+      <label class="block mb-1 font-semibold text-gray-700 mt-4" for="dob">Date Of Birth*</label>
+      <input type="date" id="dob" class="input-field" required>
+
+      <!-- Captcha Section -->
+      <label class="block mb-2 font-semibold text-gray-800 mt-4">Solve this:</label>
+      <div class="flex items-center mb-4">
+        <span id="captchaQuestion" class="text-lg font-semibold text-purple-700 mr-2"></span>
+        <button type="button" id="refreshCaptcha" class="text-blue-600 hover:text-blue-800 ml-2">🔄</button>
+        <button type="button" id="hearCaptcha" class="text-blue-600 hover:text-blue-800 ml-2">🔊 Hear Captcha</button>
+      </div>
+      <input type="text" id="captchaInput" placeholder="Enter CAPTCHA answer" class="input-field" required>
+
+
+      <!-- Login Button -->
+      <button type="submit" class="login-button w-full mt-5 p-3 rounded-md">Login</button>
+
+      <!-- Alternative Authentication Options -->
+      <div class="flex items-center my-5">
+        <div class="flex-grow border-t border-gray-400"></div>
+        <span class="mx-2 text-gray-500">or</span>
+        <div class="flex-grow border-t border-gray-400"></div>
+      </div>
+      <button type="button"
+        class="auth-button google-button w-full mb-3 p-3 flex items-center justify-center rounded-md">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo"
+          class="w-5 h-5 mr-2">
+        Continue with Google
+      </button>
+      <button type="button" class="auth-button microsoft-button w-full p-3 flex items-center justify-center rounded-md">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft logo"
+          class="w-5 h-5 mr-2">
+        Continue with Microsoft
+      </button>
+
+      <!-- Sign Up Link -->
+      <p class="text-center mt-6 text-gray-500">
+        Don't have an account? <a href="signup.html" class="text-blue-600 hover:underline">Sign up here</a>
+      </p>
+      
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("5.jpg"); filter: opacity(0.5rem); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #2E3440;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Login container styling with reduced size and more transparency */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Softer translucency */
+  padding: 1rem 1.5rem;
+  max-width: 380px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Styling for the main title */
+h2 {
+  color: #004AAD; /* Aesthetic blue for title */
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Input fields with a compact, aesthetic style */
+.input-field {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+  background-color: rgba(245, 245, 245, 0.8); /* Light background */
+  border: 1px solid #C4C4C4;
+  border-radius: 0.4rem;
+  color: #333333; /* Darker text */
+}
+
+/* Enhanced focus styling on input fields */
+.input-field:focus {
+  border-color: #004AAD;
+  outline: none;
+  box-shadow: 0 0 5px #004AAD;
+}
+
+/* Login button with vibrant color */
+.login-button {
+  background-color: #FFB703;
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.login-button:hover {
+  background-color: #FF9A00;
+  box-shadow: 0 5px 15px rgba(255, 186, 0, 0.4);
+}
+
+/* Social login buttons with vibrant, complementary colors */
+.google-button, .microsoft-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.google-button {
+  background-color: #34A853; /* Google green */
+  color: #fff;
+}
+.google-button:hover {
+  background-color: #2A8C45;
+  box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3);
+}
+
+.microsoft-button {
+  background-color: #0078D4; /* Microsoft blue */
+  color: #fff;
+}
+.microsoft-button:hover {
+  background-color: #0063B1;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+}
+
+/* Footer link styling */
+.footer-link {
+  color: #6B7280;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+.footer-link a {
+  color: #1D4ED8; /* Slightly darker blue for links */
+  text-decoration: underline;
+}

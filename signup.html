@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Udhyog Saarthi</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body class="flex justify-center items-center min-h-screen">
+
+  <!-- Signup Container with Scrollable Content -->
+  <div class="signup-container translucent-bg p-10 rounded-lg shadow-lg overflow-y-auto">
+    
+    <!-- Go Back Button -->
+    <button onclick="goBack()" class="go-back-button mb-4 p-2 text-sm font-semibold text-gray-700 hover:text-blue-600">
+      ← Go Back
+    </button>
+    
+    <h2 class="text-4xl font-bold text-center text-blue-600 mb-4">Create Your Account</h2>
+    
+    <!-- Signup Form -->
+    <form  id="signupForm" action="/signup" method="POST" class="space-y-4">
+      
+      <!-- First Name and Last Name in the same row -->
+      <div class="flex gap-4">
+        <div class="flex-1">
+          <label class="block font-semibold text-gray-800" for="firstName">First Name</label>
+          <input type="text" id="firstName" aria-label="First Name" class="input-field" placeholder="Enter First Name" required>
+        </div>
+        
+        <div class="flex-1">
+          <label class="block font-semibold text-gray-800" for="lastName">Last Name</label>
+          <input type="text" id="lastName" aria-label="Last Name" class="input-field" placeholder="Enter Last Name" required>
+        </div>
+      </div>
+
+      <!-- Other Fields -->
+      <label class="block font-semibold text-gray-800" for="gender">Gender</label>
+      <select id="gender" aria-label="Gender" class="input-field">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label class="block font-semibold text-gray-800" for="dob">Date of Birth</label>
+      <input type="date" id="dob" aria-label="Date of Birth" class="input-field" required>
+
+      <label class="block font-semibold text-gray-800" for="udid">UDID Number</label>
+      <input type="text" id="udid" aria-label="UDID Number" class="input-field" placeholder="Enter UDID Number" required>
+
+      <label class="block font-semibold text-gray-800" for="email">Email ID</label>
+      <input type="email" id="email" aria-label="Email ID" class="input-field" placeholder="Enter Email Address" required>
+
+      <label class="block font-semibold text-gray-800" for="password">Password</label>
+      <input type="password" id="password" aria-label="Password" class="input-field" placeholder="Create Password" required>
+
+      <label class="block font-semibold text-gray-800" for="retypePassword">Retype Password</label>
+      <input type="password" id="retypePassword" aria-label="Retype Password" class="input-field" placeholder="Confirm Password" required>
+
+      <!-- Signup Button -->
+      <button type="submit" class="signup-button w-full mt-6 p-3 rounded-md">Sign Up</button>
+
+    </form>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = "login.html"; // Adjust the path as needed
+    }
+  </script>
+</body>
+</html>
